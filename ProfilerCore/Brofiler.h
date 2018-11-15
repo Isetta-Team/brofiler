@@ -11,7 +11,8 @@
 #ifdef PROFILER_EXPORTS
 #define BROFILER_API __declspec(dllexport)
 #else
-#define BROFILER_API //__declspec(dllimport)
+#define BROFILER_API 
+//__declspec(dllimport)
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define BRO_CONCAT_IMPL(x, y) x##y

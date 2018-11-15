@@ -156,7 +156,13 @@
     <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|x64'">
-    <OutDir>$(SolutionDir)\Release\$(Platform)\</OutDir>
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)</OutDir>
+    <IntDir>Release\$(Platform)\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)</OutDir>
     <IntDir>Release\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)64</TargetName>
     <TargetExt>.lib</TargetExt>
@@ -243,6 +249,10 @@
       <OptimizeReferences>false</OptimizeReferences>
       <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
     <ClCompile>
