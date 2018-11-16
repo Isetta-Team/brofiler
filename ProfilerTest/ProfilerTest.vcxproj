@@ -75,7 +75,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)\Debug\$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)Debug\$(Platform)</OutDir>
     <IntDir>Debug\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
@@ -88,7 +88,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>Release\$(Platform)\</IntDir>
-    <OutDir>$(SolutionDir)\Release\$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)Release\$(Platform)</OutDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,10 +117,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <Profile>false</Profile>
       <OptimizeReferences>false</OptimizeReferences>
-      <AdditionalDependencies>C:\Users\jacobwil\Documents\Sem3\IsettaEngine\The-Engine\Isetta\External\brofiler\ProfilerCore\x64\Debug Dynamic\ProfilerCore64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>XCOPY  /Y /R "C:\Users\jacobwil\Documents\Sem3\IsettaEngine\The-Engine\Isetta\External\brofiler\ProfilerCore\x64\Debug Dynamic\ProfilerCore64.dll" "$(TargetDir)"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
