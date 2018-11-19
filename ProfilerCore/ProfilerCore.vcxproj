@@ -143,13 +143,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'">
     <TargetExt>.lib</TargetExt>
-    <OutDir>$(SolutionDir)Debug\$(Platform)</OutDir>
+    <OutDir>$(ProjectDir)Debug\$(Platform)</OutDir>
     <IntDir>Debug\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Dynamic|x64'">
     <TargetExt>.dll</TargetExt>
-    <OutDir>$(SolutionDir)Debug\$(Platform)</OutDir>
+    <OutDir>$(ProjectDir)Debug\$(Platform)</OutDir>
     <IntDir>Debug\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
@@ -177,7 +177,7 @@
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Dynamic|x64'">
-    <OutDir>$(SolutionDir)Release\$(Platform)</OutDir>
+    <OutDir>$(ProjectDir)Release\$(Platform)</OutDir>
     <IntDir>Release\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
